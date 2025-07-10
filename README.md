@@ -1,15 +1,21 @@
 # 📚 API de Livros - Spring Boot
 
-Projeto exemplo de uma API RESTful para gerenciamento de livros.
+API RESTful para gerenciamento de livros, construída com Java 17, Spring Boot 3.5, DTOs, validação, tratamento global de erros e documentação Swagger.
+
+---
 
 ## 🚀 Tecnologias Utilizadas
 
 - Java 17
-- Spring Boot 3.x
+- Spring Boot 3.5.x
 - Spring Web
 - Spring Data JPA
 - H2 Database (banco em memória)
 - Lombok
+- springdoc-openapi (Swagger)
+- JUnit & Mockito
+
+---
 
 ## 📁 Estrutura de Pacotes
 
@@ -18,8 +24,13 @@ com.exemplo.livros
 ├── controller   # Camada de controle (REST)
 ├── service      # Lógica de negócio
 ├── model        # Entidades JPA
+├── dto          # Data Transfer Objects
+├── mapper       # Conversão entre entidades e DTOs
 ├── repository   # Acesso a dados
+├── exception    # Tratamento global de exceções
 ```
+
+---
 
 ## ⚙️ Como rodar o projeto
 
@@ -38,20 +49,23 @@ com.exemplo.livros
    ```bash
    ./mvnw spring-boot:run
    ```
-   A aplicação estará disponível em: [http://localhost:8080](http://localhost:8080)
+   A aplicação estará disponível em:  
+   [https://verbose-space-zebra-vj9wxj79p75fpx6w-8080.app.github.dev/livros](https://verbose-space-zebra-vj9wxj79p75fpx6w-8080.app.github.dev/livros)
+
+---
 
 ## 🛠️ Exemplos de uso
 
 ### Listar livros
 
 ```http
-GET /api/livros
+GET /livros
 ```
 
 ### Adicionar livro
 
 ```http
-POST /api/livros
+POST /livros
 Content-Type: application/json
 
 {
@@ -64,13 +78,13 @@ Content-Type: application/json
 ### Buscar livro por ID
 
 ```http
-GET /api/livros/1
+GET /livros/1
 ```
 
 ### Atualizar livro
 
 ```http
-PUT /api/livros/1
+PUT /livros/1
 Content-Type: application/json
 
 {
@@ -83,13 +97,38 @@ Content-Type: application/json
 ### Remover livro
 
 ```http
-DELETE /api/livros/1
+DELETE /livros/1
 ```
+
+---
+
+## ✅ Validação e Tratamento de Erros
+
+- Todos os campos obrigatórios são validados.
+- Erros de validação retornam JSON detalhado, exemplo:
+  ```json
+  {
+    "titulo": "O título é obrigatório.",
+    "anoPublicacao": "O ano de publicação deve ser no mínimo 1500."
+  }
+  ```
+
+---
 
 ## 🗄️ Banco de Dados H2
 
-Acesse o console do H2 em: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)  
+Acesse o console do H2 em:  
+[https://verbose-space-zebra-vj9wxj79p75fpx6w-8080.app.github.dev/h2-console](https://verbose-space-zebra-vj9wxj79p75fpx6w-8080.app.github.dev/h2-console)  
 JDBC URL padrão: `jdbc:h2:mem:testdb`
+
+---
+
+## 📖 Documentação Swagger
+
+Acesse a documentação interativa em:  
+[https://verbose-space-zebra-vj9wxj79p75fpx6w-8080.app.github.dev/swagger-ui.html](https://verbose-space-zebra-vj9wxj79p75fpx6w-8080.app.github.dev/swagger-ui.html)
+
+---
 
 ## 📝 Licença
 
