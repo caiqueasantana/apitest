@@ -1,0 +1,8 @@
+/workspaces/apitest/src/main/java/com/exemplo/livros/src/main/java/Exceptions/GlobalExceptionHandler.java
+/workspaces/apitest/src/main/java/com/exemplo/livros/src/main/java/com/example/livros/LivroDTO/LivroDTO.java
+/workspaces/apitest/src/main/java/com/exemplo/livros/src/main/java/com/example/livros/LivroMapper/LivroMapper.java
+/workspaces/apitest/src/main/java/com/exemplo/livros/src/main/java/com/example/livros/LivrosApplication.java
+/workspaces/apitest/src/main/java/com/exemplo/livros/src/main/java/com/example/livros/controller/LivroController.java
+/workspaces/apitest/src/main/java/com/exemplo/livros/src/main/java/com/example/livros/model/Livro.java
+/workspaces/apitest/src/main/java/com/exemplo/livros/src/main/java/com/example/livros/repository/LivroRepository.java
+/workspaces/apitest/src/main/java/com/exemplo/livros/src/main/java/com/example/livros/service/LivroService.java
